@@ -4,10 +4,10 @@
 #apt-get update
 #apt-get install -y nginx
 
-mkdir -p data/web_static/releases/test/
-mkdir -p data/web_static/shared/
-echo "Best School" > data/web_static/releases/test/index.html
-ln -sf data/web_static/releases/test/ /data/wed_static/current
+mkdir -p /data/web_static/releases/test/
+mkdir -p /data/web_static/shared/
+echo "Best School" > /data/web_static/releases/test/index.html
+ln -sf /data/web_static/releases/test/ /data/web_static/current
 
 chown -R ubuntu:ubuntu /data/
 
@@ -30,6 +30,6 @@ printf %s "server {
 		root /var/www/html;
 		internal;
 	}
-}" > etc/nginx/sites-available/default
+}" > /etc/nginx/sites-available/default
 
 service nginx restart
