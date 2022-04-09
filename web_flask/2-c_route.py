@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """ Starts a flask web application
     with three routes (/) (/hbnb)
-    and (/c/<text>: display "C" followed bt the value of the text
+    and (/c/<text>: display "C" followed by the value of the text
     variable (replace underscore _ symbols with a space )
 """
 
