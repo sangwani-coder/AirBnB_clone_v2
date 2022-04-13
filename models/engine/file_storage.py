@@ -48,13 +48,13 @@ class FileStorage:
         except FileNotFoundError:
             pass
 
-    def close(self):
-        """ reloads JSON object"""
-        return self.reload()
-
     def delete(self, obj=None):
         """delete obj from __objects if pressent"""
         try:
             del self.__objects["{}.{}".format(type(obj).__name__, obj.id)]
         except (AttributeError, KeyError):
             pass
+
+    def close(self):
+        """ Call the reload method."""
+        self.reload()
