@@ -119,7 +119,7 @@ class HBNBCommand(cmd.Cmd):
             for pair in range(1, len(my_list)):
                 key, value = tuple(my_list[i].split("="))
                 if value[0] == '"':
-                    value = value.strip('"'), replace("_", " ")
+                    value = value.strip('"').replace("_", " ")
                 else:
                     try:
                         value = eval(value)
